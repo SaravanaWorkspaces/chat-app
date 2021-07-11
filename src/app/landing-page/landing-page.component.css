@@ -1,0 +1,6 @@
+.screen-bg {
+  position: fixed;
+  background: coral;
+  height: 100%;
+  width: 100%;
+}

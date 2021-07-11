@@ -1,0 +1,16 @@
+<div class="chat-box-body">
+
+  <!--Tool bar-->
+  <div class="toolbar">
+
+    <img class="back-arrow" src="assets/arrow_back_black_24dp.svg">
+    <div class="title">
+      <p>Chat box</p>
+    </div>
+  </div>
+
+  <div class="chat-footer">
+    <input class="input-box" type="text" [(ngModel)]="message">
+    <button class="send-btn" (click)='sendMessage()'> Send</button>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+.chat-box-body {
+  height: 100vh;
+}
+
+.toolbar {
+  height: 56px; 
+  width: 100%;
+  background-color: darkseagreen;
+  display: flex;
+}
+
+.back-arrow {
+  margin: 16px;
+  align-self: center;
+  fill: white;
+}
+
+.title {
+  font-size: 18px;  
+  align-self: center;
+}
+
+.chat-footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+
+  height: 3.5rem;
+  display: flex;
+}
+
+.input-box {
+  flex-grow: 2; 
+  margin: 5px 2px;
+}
+
+.send-btn {
+  align-content: center;
+  flex-grow: 1;
+  margin: 5px 2px;
+}
