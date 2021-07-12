@@ -1,6 +1,9 @@
 import { NgModule }             from '@angular/core'
-import { RouterModule, Routes } from '@angular/router'
-import { ChatBoxComponent } from './chat-box/chat-box.component'
+import { 
+         RouterModule, 
+         Routes 
+       }                        from '@angular/router'
+import { ChatBoxComponent }     from './chat-box/chat-box.component'
 import { HomeComponent }        from './home/home.component'
 import { LandingPageComponent } from './landing-page/landing-page.component'
 

@@ -1,12 +1,13 @@
-import { NgModule }             from '@angular/core';
-import { BrowserModule }        from '@angular/platform-browser';
+import { NgModule }             from '@angular/core'
+import { BrowserModule }        from '@angular/platform-browser'
 
-import { AppRoutingModule }     from './app-routing.module';
-import { AppComponent }         from './app.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { HomeComponent } from './home/home.component';
-import { ChatBoxComponent } from './chat-box/chat-box.component';
-import { FormsModule } from '@angular/forms'
+import { AppRoutingModule }     from './app-routing.module'
+import { AppComponent }         from './app.component'
+import { LandingPageComponent } from './landing-page/landing-page.component'
+import { HomeComponent }        from './home/home.component'
+import { ChatBoxComponent }     from './chat-box/chat-box.component'
+import { FormsModule }          from '@angular/forms'
+import { MatListModule }        from '@angular/material/list'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
