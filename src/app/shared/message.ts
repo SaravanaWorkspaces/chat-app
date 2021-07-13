@@ -1,7 +1,5 @@
-import { REGISTER } from "../chat/socket-manager";
-
 export const SERVER_INTERFACE = {
-  ACKNOWLEDGEMENT : REGISTER.MESSAGE_ACKNOWLEDGEMENT
+  ACKNOWLEDGEMENT : '_ack'
 }
 
 export interface Message {
