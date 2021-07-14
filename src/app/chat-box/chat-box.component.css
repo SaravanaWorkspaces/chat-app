@@ -1,5 +1,8 @@
-.chat-box-body {
-  height: 100vh;
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.layout {
+  height:100vh;
+  background-color: rgb(247, 241, 241);
 }
 
 .toolbar {
@@ -38,4 +41,31 @@
   align-content: center;
   flex-grow: 1;
   margin: 5px 2px;
+}
+
+.chat-body {
+  display: grid;
+  flex-direction: column;
+  grid-column: 1;
+  overflow: scroll;
+}
+
+.chat-card {
+  width: fit-content;
+  margin: .3em;
+  padding: .75em;
+  display: flex;
+}
+
+.chat-message-txt {
+  font-size: 1em;
+}
+
+.chat-time-txt {
+  font-size: .75em;
+  white-space: nowrap;
+
+  align-self: flex-end;
+  justify-self: flex-end;
+  padding: .2em;
 }

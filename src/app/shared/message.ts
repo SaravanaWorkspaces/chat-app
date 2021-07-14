@@ -2,7 +2,15 @@ export const SERVER_INTERFACE = {
   ACKNOWLEDGEMENT : '_ack'
 }
 
-export interface Message {
+export enum MessageState {
+  CREATED     = 1,
+  PENDING,
+  SENT,
+  DELIVERED,
+  READ,
+  FAILED,
+}
+export interface MessageBase {
 
   id            : number
 
@@ -10,13 +18,22 @@ export interface Message {
 
   message       : string
 
-  messageBy     : number  
+  createdBy     : number  
 
-  read          : boolean
+  createdTs     : number
+}
+export interface Message extends MessageBase {
+
+  state         : MessageState
 
   deleted       : boolean
+}
 
-  hardDeleted   : boolean
+export interface MessageAcknowledgement {
+  
+  messageId     : number,
 
-  ts            : number
+  widowId       : number,
+
+  messageState  : MessageState
 }

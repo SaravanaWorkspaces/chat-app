@@ -1,4 +1,4 @@
-<div class="chat-box-body">
+<div class="layout">
 
   <!--Tool bar-->
   <div class="toolbar">
@@ -9,12 +9,15 @@
     </div>
   </div>
 
-  <mat-list>
-    
-  </mat-list>
+  <div class="chat-body">
+    <mat-card  class="chat-card" *ngFor="let msg of messages">
+      <p class="chat-message-txt">{{msg.message}}</p>
+      <p class="chat-time-txt">12:00 A.M</p>
+    </mat-card>
+  </div>
 
   <div class="chat-footer">
-    <input class="input-box" type="text" [(ngModel)]="message">
+    <input class="input-box" type="text" [(ngModel)]="message" (keyup.enter)="sendMessage()" >
     <button class="send-btn" (click)='sendMessage()'> Send</button>
   </div>
 </div>

@@ -8,6 +8,7 @@ import { HomeComponent }        from './home/home.component'
 import { ChatBoxComponent }     from './chat-box/chat-box.component'
 import { FormsModule }          from '@angular/forms'
 import { MatListModule }        from '@angular/material/list'
+import { MatCardModule }        from '@angular/material/card'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MatListModule }        from '@angular/material/list'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

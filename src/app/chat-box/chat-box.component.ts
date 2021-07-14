@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
-import { SocketManager }     from '../chat/socket-manager'
+import { ChatService } from '../service/chat.service'
+import { Message } from '../shared/message'
 
 @Component({
   selector: 'app-chat-box',
@@ -10,14 +11,19 @@ export class ChatBoxComponent implements OnInit {
 
   message : string = ''
 
-  socketMgr = new SocketManager()
+  messages : Message [] = []
 
-  constructor() { }
+  constructor(private msgService: ChatService) { 
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.messages = this.msgService.msgs
+  }
 
   sendMessage() {
-    this.socketMgr.sendMessage(this.message)
+    if (!this.message) return
+    
+    this.msgService.sendMessage(this.message)
     this.message = ''
   }
 }
